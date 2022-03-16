@@ -25,4 +25,4 @@ jobs:
             cp -r .git ~/build/.git
             cd ~/build
             git checkout -b pages || git checkout pages
-            git push
+            git push --force --set-upstream origin pages
