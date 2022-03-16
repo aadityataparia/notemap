@@ -2,6 +2,7 @@
   "name": "notemap",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aadityataparia.github.io/notemap",
   "engines": {
     "node": "16"
   },
