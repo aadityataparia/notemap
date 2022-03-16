@@ -37,6 +37,8 @@ jobs:
             cp -r .git ~/build/.git
             cd ~/build
             git checkout -b pages || git checkout pages
+            git config --global user.email "circleci@ci.auto.test"
+            git config --global user.name "Circle CI Job"
             git add -A .
             git commit -m "feat: automatic pages deployment by circleci"
             git push --force --set-upstream origin pages
