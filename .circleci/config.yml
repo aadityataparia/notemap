@@ -1,0 +1,28 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:16
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: yarn install
+
+      - run:
+          name: Build
+          command: yarn build
+
+      - run:
+          name: Copy build files
+          command: | 
+            cp -r build ~/build
+            cp -r .git ~/build/.git
+            cd ~/build
+            git checkout -b pages || git checkout pages
+            git push
