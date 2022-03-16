@@ -37,4 +37,6 @@ jobs:
             cp -r .git ~/build/.git
             cd ~/build
             git checkout -b pages || git checkout pages
+            git add -A .
+            git commit -m "feat: automatic pages deployment by circleci"
             git push --force --set-upstream origin pages
