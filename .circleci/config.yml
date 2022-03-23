@@ -32,7 +32,7 @@ jobs:
 
       - run:
           name: Copy build files
-          command: | 
+          command: |
             if [[ $CIRCLE_BRANCH = main ]]; then
               cp -r build ~/build
               cp -r .git ~/build/.git

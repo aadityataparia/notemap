@@ -1,11 +1,7 @@
-import React from 'react';
+import Pages from './pages'
 
 function App() {
-  return (
-    <div>
-      <h1>NoteMAP</h1>
-    </div>
-  );
+  return <Pages></Pages>
 }
 
-export default App;
+export default App
